@@ -11,7 +11,10 @@ function App() {
 
   const addValue = () => {
     // counter = counter + 1
-    setCounter(counter + 1)
+    setCounter(prevCounter => prevCounter + 1) // correct way to update state based on previous state
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
 
     if(counter >= 20){
       setCounter(20)
